@@ -5,12 +5,9 @@ TARGET = wallpaper-generator-cli
 # ALL CPP COMPILABLE IMPLEMENTATION FILES THAT MAKE UP THE PROJECT
 SRC_FILES = main.cpp Wallpaper.cpp lodepng.cpp
 
-# NO EDITS NEEDED BELOW THIS LINE
-
 CXX = g++
-CXXFLAGS = -O2
-CXXFLAGS_DEBUG = -g
-CXXFLAGS = -Wall -Wextra -Werror -pedantic-errors
+CXXFLAGS = -O3 -Wall -Wextra -Werror -pedantic-errors -flto -funroll-loops -Ofast -ffast-math -march=native -mtune=native -fomit-frame-pointer -funroll-loops 
+# CXXFLAGS_DEBUG = -g
 CPPVERSION = -std=c++17
 
 OBJECTS = $(SRC_FILES:.cpp=.o)
