@@ -6,8 +6,8 @@
 My final project is command line wallpaper generator that is based on Roy Tanck’s wallpaper generation algorithm [1]. With this tool, users can specify various parameters such as image resolution, if they would like to embed another image within the generated image, and the position of said image. I have previously done a project similar to this, as an exercise for learning JavaScript, however it was terribly inefficient and would take upwards of 10 seconds to generate one wallpaper. But by leveraging the power of C++, this tool provides an efficient and user-friendly way to personalize their wallpaper without requiring extensive design knowledge or specialized software. Surprisingly with the right compiler optimizations, this program can generate a wallpaper in 0.05 seconds, all while being a fraction of the size of the JS implementation (1.8MB vs 211MB with dependencies)! This tool likewise enables users to create new wallpapers programmatically, which opens up a world of opportunities. A potential programmatic use case of this program would be [generating a new wallpaper every time you log into your computer!](#generating-a-new-wallpaper-on-login)
 
 ### Examples:
-|--------------------------|--------------------------|--------------------------|
-| ![Example 1](docs/1.png) | ![Example 2](docs/2.png) | ![Example 2](docs/2.png) |
+
+| ![Example 1](docs/1.png) | ![Example 2](docs/2.png) | ![Example 2](docs/3.png) |
 |--------------------------|--------------------------|--------------------------|
 
 ## Installation
