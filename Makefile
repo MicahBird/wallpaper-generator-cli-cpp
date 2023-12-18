@@ -6,7 +6,7 @@ TARGET = wallpaper-generator-cli
 SRC_FILES = main.cpp Wallpaper.cpp lodepng.cpp
 
 CXX = g++
-CXXFLAGS = -O3 -Wall -Wextra -Werror -pedantic-errors -flto -funroll-loops -Ofast -ffast-math -march=native -mtune=native -fomit-frame-pointer -funroll-loops 
+CXXFLAGS = -O3 -Wall -Wextra -Werror -pedantic-errors -flto -funroll-loops -Ofast -ffast-math -fomit-frame-pointer -funroll-loops 
 # CXXFLAGS_DEBUG = -g
 CPPVERSION = -std=c++17
 
