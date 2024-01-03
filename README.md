@@ -19,9 +19,7 @@ Usage: ./wallpaper-generator-cli [OPTIONS]
 
 Options:
   -h,--help                   Print this help message and exit
-  -o,--output TEXT REQUIRED   Path of output file as a png (Ex: ./my-epic-wallpaper.png)
-  -r,--resolution TEXT        The resolution of the image in the format WIDTHxHEIGHT (Default: 1920x1080)
-  -e,--embed TEXT             Path of embed PNG image (Ex: ./my-embed-image.png)
+  -o,--output TEXT REQUIRED   Path of output file as a png (Ex: ./my-epic-wallpaper.png) -r,--resolution TEXT        The resolution of the image in the format WIDTHxHEIGHT (Default: 1920x1080) -e,--embed TEXT             Path of embed PNG image (Ex: ./my-embed-image.png)
   -p,--embedPosition TEXT     Position of the embedded image in wallpaper in the format WIDTHxHEIGHT|lowerright|upperleft (Default: lowerright)
 
 Examples:
@@ -44,7 +42,7 @@ wallpaper-generator-cli -r 3840x2160 -o ~/Pictures/wallpaper.png
 ```
 
 ### Android
-First install and setup the [Termux Boot](https://f-droid.org/packages/com.termux.boot/) app and then paste the following script into `~/.termux/boot/01-wallpaper-gen.sh` and adjust the resolution to your liking!
+First install and setup the [Termux Boot](https://f-droid.org/packages/com.termux.boot/) and [Termux API](https://f-droid.org/en/packages/com.termux.api) apps. Then install the appropriate packages in Termux with the command `pkg install -y termux-api` and finally paste the following script into `~/.termux/boot/01-wallpaper-gen.sh` and adjust the resolution to your liking!
 ```sh
 #!/data/data/com.termux/files/usr/bin/sh
 ~/.local/bin/wallpaper-generator-cli -r 3200x5120 -o homescreen.png
