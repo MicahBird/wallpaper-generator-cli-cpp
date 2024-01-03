@@ -43,6 +43,17 @@ Simply copy/paste the following script to `new-wallpaper` and add it as a login 
 wallpaper-generator-cli -r 3840x2160 -o ~/Pictures/wallpaper.png
 ```
 
+### Android
+First install and setup the [Termux Boot](https://f-droid.org/packages/com.termux.boot/) app and then paste the following script into `~/.termux/boot/01-wallpaper-gen.sh` and adjust the resolution to your liking!
+```sh
+#!/data/data/com.termux/files/usr/bin/sh
+~/.local/bin/wallpaper-generator-cli -r 3200x5120 -o homescreen.png
+~/.local/bin/wallpaper-generator-cli -r 3200x5120 -o lockscreen.png
+termux-wallpaper -f homescreen.png
+termux-wallpaper -l -f lockscreen.png
+```
+
+
 ## Program Documentation
 
 You can generate a 1920x1080 wallpaper by simply running `make` and `wallpaper-generator-cli -o ./my-epic-wallpaper.png` and then opening the `my-epic-wallpaper.png` file! This program uses two external libraries: LodePNG [2] and CLI11 [3] both of which are bundled with the program and are fully portable. The program also has the capability to embed another PNG image within a generated wallpaper, and an example file (kitten.png [7]) is included for this purpose. Simply run `wallpaper-generator-cli -e kitten.png -p upperleft -o ./my-epic-embedded-wallpaper.png` to generate a 1920x1080 wallpaper with a placeholder kitten embedded in the upper left. Finally, it's possible to generate a different resolution wallpaper by using the `-r` flag. For example, to generate a 4K wallpaper in the current directory, run `wallpaper-generator-cli -r 3840x2160 -o ./my-epic-wallpaper.png`. For more options and examples, run `wallpaper-generator-cli -h`. It's also worth noting that the program is expected to not output anything when running successfully.
